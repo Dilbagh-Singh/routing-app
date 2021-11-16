@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col-xs-4 outer time">
+      <div class="counter">
+        Countdown timer 
+      </div>
+
+      <div class="clock time">
+        <div class="inline">
+          {{ timeLeft }} Seconds Left
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4 outer">
+    <div class="time">
+      <input type="text" #fondovalor value="">
+    </div>
+    <div class="time">
+      <button class="start bubbly-button" (click)='startTimer()'>Start Timer</button>
+      <button class="pause bubbly-button" (click)='pauseTimer()'>Pause</button>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="hits">No of pause/resume hits : {{ timestamps.length }}</div>
+<div>Time Records:</div>
+<app-timestamp [childMessage]="timestamps" *ngFor="let transmits of timestamps"></app-timestamp>
+
+
+
