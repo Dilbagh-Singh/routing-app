@@ -1,0 +1,50 @@
+.box {
+    text-align: center;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.outer {
+    margin: auto;
+    width: 60%;
+}
+
+.inner {
+    background-color: gold;
+}
+
+.example1 {
+    height: 50px;  
+    overflow: hidden;
+    position: relative;
+   }
+   .example1 h3 {
+    font-size: 3em;
+    color: blue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);  
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    animation: example1 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @keyframes example1 {
+    0%   { 
+    transform: translateX(100%);     
+    }
+    100% { 
+    transform: translateX(-100%); 
+    }
+   }
+
+   .app1head {
+       font-size: 30px;
+       text-decoration: underline;
+   }

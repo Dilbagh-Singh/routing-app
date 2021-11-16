@@ -1,0 +1,18 @@
+<div class="backg">
+    <input type="number" [(ngModel)]="rows" class="margin"/>
+    <select name="layout" id="layouts" class="dropdown margin" (change)="selectOption($event)">
+      <option value="4 column">4 item row</option>
+      <option value="2 column">2 item row</option>
+    </select>
+    <button (click)="setDimension()" type="button">Change</button>
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let col of rowArray; index as i" class="layFour" [class.layTwo]="!layingGrid">
+            <div  class="col-xs-3 test inline">
+              <span>{{i+1}}</span>
+            </div>
+            <span class="test1 inline"> Item Number {{i+1}}</span>
+          </div>
+        </div>
+      </div>
+  </div>
